@@ -15,11 +15,10 @@ func _on_rich_text_label_meta_clicked(meta):
 	OS.shell_open(meta)
 
 
-func _on_h_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(1, linear_to_db(value))
+func _on_music_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
 
 
-func _on_h_slider_2_value_changed(value):
-	AudioServer.set_bus_volume_db(2, linear_to_db(value))
+func _on_sfx_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
 	Sfx.click()
-
