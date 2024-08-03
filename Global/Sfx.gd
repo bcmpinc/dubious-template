@@ -1,9 +1,7 @@
 extends Node
-
 # For background audio
-@onready var music : AudioStreamPlayer = $MusicPlayer;
+@onready var music : AudioStreamPlayer = $MusicPlayer
 var music_tween : Tween
-
 # For button noises
 func click():
 	$Click.play()

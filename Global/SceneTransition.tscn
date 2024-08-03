@@ -121,7 +121,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="DissolveRect"]
 visible = false
-anchors_preset = 4
+layout_mode = 0
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 434.0
