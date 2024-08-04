@@ -110,13 +110,16 @@ _data = {
 }
 
 [node name="Global" type="CanvasLayer"]
+process_mode = 3
 editor_description = "Has to be a Canvas Layer to ensure its drawn on top of everything else."
 script = ExtResource("1_8vygp")
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_gocb6")
+bus = &"SFX"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
 
 [node name="DissolveRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -148,7 +151,6 @@ libraries = {
 
 [node name="ConfigButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-process_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -165,7 +167,6 @@ texture_normal = ExtResource("3_wpa8s")
 
 [node name="Settings" type="PanelContainer" parent="."]
 unique_name_in_owner = true
-process_mode = 2
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -203,8 +204,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = -40.0
-max_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
 
 [node name="MusicImage" type="TextureRect" parent="Settings/VBoxContainer/Control"]
 texture_filter = 1
@@ -216,8 +218,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = -40.0
-max_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
 
 [node name="CloseButton" type="Button" parent="Settings/VBoxContainer"]
 unique_name_in_owner = true

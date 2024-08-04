@@ -368,12 +368,15 @@ libraries = {
 stream = ExtResource("6_kemk8")
 volume_db = -15.0
 pitch_scale = 2.5
+bus = &"SFX"
 
 [node name="IntroSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_cvmlf")
 volume_db = -12.0
+bus = &"SFX"
 
 [node name="Buzz" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_p74vo")
 volume_db = -80.0
 autoplay = true
+bus = &"SFX"

@@ -28,15 +28,17 @@ func _ready():
 	RNG.randomize()
 	%Settings.visible = false
 	%SoundSlider.value_changed.connect(func(value):
-		AudioServer.set_bus_volume_db(SFX_BUS, value)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
+		click()
 	)
 	%MusicSlider.value_changed.connect(func(value):
-		AudioServer.set_bus_volume_db(MUSIC_BUS, value)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
 	)
 	%ConfigButton.pressed.connect(func():
 		settings_visible(!%Settings.visible)
 	)
 	%CloseButton.pressed.connect(func():
+		click()
 		settings_visible(false)
 	)
 
@@ -49,9 +51,8 @@ func _input(event):
 	if event is InputEventMouse:
 		if music.stream != null and not music.playing:
 			music.play()
-	if event.is_action("ui_cancel"):
-		if %Settings.visible:
-			settings_visible(false)
+	if event.is_action_pressed("ui_cancel"):
+		settings_visible(!%Settings.visible)
 
 func play_music(stream : AudioStream, volume_db: float = 0.0):
 	if music_tween != null:
