@@ -16,4 +16,4 @@ func _unhandled_input(event):
 			proceed()
 
 func proceed():
-	SceneTransition.change_scene_to_file(next)
+	Global.change_scene_to_file(next)
