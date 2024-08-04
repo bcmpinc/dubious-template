@@ -41,6 +41,8 @@ func _ready():
 		click()
 		settings_visible(false)
 	)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(%SoundSlider.value))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(%MusicSlider.value))
 
 # For button noises
 func click():
