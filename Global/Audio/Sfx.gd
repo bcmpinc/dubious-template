@@ -1,5 +1,8 @@
 extends Node
 
+const SFX_BUS = 1
+const MUSIC_BUS = 2
+
 # For background audio
 @onready var music : AudioStreamPlayer = $MusicPlayer;
 var music_tween : Tween
@@ -7,6 +10,14 @@ var music_tween : Tween
 # For button noises
 func click():
 	$Click.play()
+	
+func _ready():
+	connect(%SoundSlider.value_changed, func(value):
+		AudioServer.set_bus_volume_db(SFX_BUS, value)
+	)
+	connect(%MusicSlider.value_changed, func(value):
+		AudioServer.set_bus_volume_db(MUSIC_BUS, value)
+	)
 
 # Trigger audio start on first mouse input for web builds.
 func _input(event):

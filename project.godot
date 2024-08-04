@@ -17,14 +17,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global/Global.gd"
-SceneTransition="*res://Global/SceneTransition.tscn"
-Sfx="*res://Global/Sfx.tscn"
+Global="*res://Global/Global.tscn"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+
+[gui]
+
+theme/custom="res://UI/theme.tres"
 
 [input]
 
