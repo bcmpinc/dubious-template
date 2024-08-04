@@ -1,0 +1,89 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bwekckjgabm36"]
+
+[ext_resource type="Texture2D" uid="uid://dpxo1t7qlv0ok" path="res://Global/Theme/button-hover.png" id="1_15hxi"]
+[ext_resource type="FontFile" uid="uid://dmtnwm0wicmn6" path="res://Global/Purisa Bold.ttf" id="1_yofyo"]
+[ext_resource type="Texture2D" uid="uid://dvx1s350nisjw" path="res://Global/Theme/button-idle.png" id="2_8k1ag"]
+[ext_resource type="Texture2D" uid="uid://dde3ig6hn7pvl" path="res://Global/Theme/button-focus.png" id="2_vbytd"]
+[ext_resource type="Texture2D" uid="uid://cr0ka1vxqpsum" path="res://Global/Theme/button-pressed.png" id="3_4a1tv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfoor"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("2_vbytd")
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 48.0
+margin_bottom = 48.0
+region_rect = Rect2(0, 0, 96, 96)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyb0i"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("1_15hxi")
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 48.0
+margin_bottom = 48.0
+region_rect = Rect2(0, 0, 96, 96)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wiri"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("2_8k1ag")
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 48.0
+margin_bottom = 48.0
+region_rect = Rect2(0, 0, 96, 96)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvcyc"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("3_4a1tv")
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 48.0
+margin_bottom = 48.0
+region_rect = Rect2(0, 0, 96, 96)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53yme"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.415686, 0.372549, 0.258824, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 4
+
+[resource]
+default_font = ExtResource("1_yofyo")
+default_font_size = 32
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.4, 0.211765, 0.105882, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 0.501961)
+Button/colors/font_pressed_color = Color(0.415686, 0.372549, 0.258824, 1)
+Button/colors/icon_focus_color = Color(0.4, 0.211765, 0.105882, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0.415686, 0.372549, 0.258824, 1)
+Button/constants/outline_size = 4
+Button/styles/focus = SubResource("StyleBoxTexture_xfoor")
+Button/styles/hover = SubResource("StyleBoxTexture_eyb0i")
+Button/styles/normal = SubResource("StyleBoxTexture_1wiri")
+Button/styles/pressed = SubResource("StyleBoxTexture_mvcyc")
+GridContainer/constants/h_separation = 8
+GridContainer/constants/v_separation = 8
+Panel/styles/panel = SubResource("StyleBoxFlat_53yme")

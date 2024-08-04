@@ -28,10 +28,10 @@ game = "res://main.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 75.0
-offset_right = 361.0
-offset_bottom = 278.0
+offset_left = 56.0
+offset_top = 116.0
+offset_right = 406.0
+offset_bottom = 319.0
 rotation = -0.221657
 
 [node name="Button" type="Button" parent="."]

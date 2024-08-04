@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 @export var anim  : AnimationPlayer
 @export var audio : AudioStreamPlayer
