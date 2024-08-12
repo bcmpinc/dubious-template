@@ -53,7 +53,8 @@ func _input(event):
 	if event is InputEventMouse:
 		if music.stream != null and not music.playing:
 			music.play()
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") and get_tree().current_scene.name != "LogoAnimation":
+		print(get_tree().current_scene.name)
 		settings_visible(!%Settings.visible)
 
 func play_music(stream : AudioStream, volume_db: float = 0.0):
