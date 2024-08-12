@@ -23,5 +23,6 @@ func _ready():
 	$AuthorName.text = author_name
 	$Background.color = background_color
 	self.pressed.connect(func():
+		Global.click()
 		OS.shell_open(link)
 	)

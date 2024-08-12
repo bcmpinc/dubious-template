@@ -10,7 +10,7 @@ func _ready():
 	audio.play()
 	audio.finished.connect(proceed)
 
-func _unhandled_input(event):
+func _input(event):
 	if event is InputEventKey:
 		if event.is_action_pressed("ui_cancel"):
 			proceed()

@@ -51,16 +51,17 @@ atlas = ExtResource("1_dya56")
 region = Rect2(192, 344, 152, 144)
 
 [node name="Player" type="Node2D"]
-position = Vector2(-42, -150)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
-position = Vector2(42, 150)
 rotation = 0.00192105
 
 [node name="Hip" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(2, -220)
 rotation = -0.00303808
 rest = Transform2D(1, 0, 0, 1, 2, -220)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Hip"]
+remote_path = NodePath("../../../Character/Body")
 
 [node name="Body" type="Bone2D" parent="Skeleton2D/Hip"]
 position = Vector2(5, -139)
@@ -138,86 +139,86 @@ length = 60.0
 bone_angle = 15.0
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(1, 0)
 
 [node name="ArmUp2" type="Sprite2D" parent="Character"]
-position = Vector2(54, -186)
+position = Vector2(17, -334)
 texture = SubResource("AtlasTexture_qkkgb")
 offset = Vector2(50, -1)
 
 [node name="ArmLow2" type="Sprite2D" parent="Character"]
-position = Vector2(146.415, -185.108)
+position = Vector2(109.415, -333.108)
 rotation = -0.00438314
 texture = SubResource("AtlasTexture_ljbvb")
 offset = Vector2(73.5616, 5.43048)
 
 [node name="LegUp2" type="Sprite2D" parent="Character"]
-position = Vector2(45, -68)
+position = Vector2(8, -216)
 texture = SubResource("AtlasTexture_bf8ex")
 offset = Vector2(-3, 37)
 
 [node name="Foot2" type="Sprite2D" parent="Character"]
-position = Vector2(41, 136)
+position = Vector2(4, -12)
 texture = SubResource("AtlasTexture_wc55t")
 offset = Vector2(25, 4)
 
 [node name="LegLow2" type="Sprite2D" parent="Character"]
-position = Vector2(41, 5)
+position = Vector2(4, -143)
 texture = SubResource("AtlasTexture_32y5e")
 offset = Vector2(1, 46)
 
 [node name="Body" type="Sprite2D" parent="Character"]
-position = Vector2(136, -193)
+position = Vector2(2.42263, -219.996)
+rotation = -0.00111703
 texture = SubResource("AtlasTexture_prd14")
-offset = Vector2(-88, 56)
+offset = Vector2(6.41425, -68.9543)
 
 [node name="Head" type="Sprite2D" parent="Character"]
-position = Vector2(49, -212)
+position = Vector2(12, -360)
 texture = SubResource("AtlasTexture_1ybxp")
 offset = Vector2(4, -62)
 
 [node name="Eye" type="Sprite2D" parent="Character"]
-position = Vector2(79, -298)
+position = Vector2(42, -446)
 texture = SubResource("AtlasTexture_wi8fu")
 offset = Vector2(-2, 1)
 
 [node name="ArmUp1" type="Sprite2D" parent="Character"]
-position = Vector2(53, -186)
+position = Vector2(16, -334)
 texture = SubResource("AtlasTexture_l1s6s")
 offset = Vector2(50, -2)
 
 [node name="ArmLow1" type="Sprite2D" parent="Character"]
-position = Vector2(144.688, -185.084)
+position = Vector2(107.688, -333.084)
 rotation = -0.00438314
 texture = SubResource("AtlasTexture_ljbvb")
 offset = Vector2(75.2844, 6.41422)
 
 [node name="LegUp1" type="Sprite2D" parent="Character"]
-position = Vector2(43, -70)
+position = Vector2(6, -218)
 texture = SubResource("AtlasTexture_bf8ex")
 offset = Vector2(-2, 37)
 
 [node name="Foot1" type="Sprite2D" parent="Character"]
-position = Vector2(41, 136)
+position = Vector2(4, -12)
 texture = SubResource("AtlasTexture_wc55t")
 offset = Vector2(23, 2)
 
 [node name="LegLow1" type="Sprite2D" parent="Character"]
-position = Vector2(42, 6)
+position = Vector2(5, -142)
 texture = SubResource("AtlasTexture_32y5e")
 offset = Vector2(-1, 49)
 
 [node name="Hair1" type="Sprite2D" parent="Character"]
-position = Vector2(41, -327)
+position = Vector2(4, -475)
 texture = SubResource("AtlasTexture_og6a7")
 offset = Vector2(-60, 16)
 
 [node name="Hair2" type="Sprite2D" parent="Character"]
-position = Vector2(-67, -316)
+position = Vector2(-104, -464)
 texture = SubResource("AtlasTexture_smu3b")
 offset = Vector2(-43, 3)
 
 [node name="Hair3" type="Sprite2D" parent="Character"]
-position = Vector2(-154, -312)
+position = Vector2(-191, -460)
 texture = SubResource("AtlasTexture_6e0vf")
 offset = Vector2(-24, -2)
