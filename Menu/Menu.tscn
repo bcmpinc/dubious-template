@@ -96,8 +96,8 @@ offset_top = 120.0
 offset_right = -6.0
 offset_bottom = 184.0
 author_image = SubResource("AtlasTexture_w0mla")
-author_name = "Artie"
 background_color = Color(0.614085, 0.976583, 0.696255, 1)
+author_name = "Artie"
 link = "https://frogwizardhat.itch.io/"
 
 [node name="Alias" parent="Control" instance=ExtResource("5_wxbgr")]
@@ -107,8 +107,8 @@ offset_top = 3.0
 offset_right = -105.0
 offset_bottom = 67.0
 author_image = SubResource("AtlasTexture_wedgg")
+background_color = Color(0.929641, 0, 0.00781262, 1)
 author_name = "Mr. Alias"
-background_color = Color(0.573792, 0.573792, 0.573792, 1)
 link = "https://www.youtube.com/c/MrAlias"
 
 [node name="Luko" parent="Control" instance=ExtResource("5_wxbgr")]
@@ -118,8 +118,8 @@ offset_top = 60.0
 offset_right = -57.0
 offset_bottom = 124.0
 author_image = SubResource("AtlasTexture_001a6")
-author_name = "Luko"
 background_color = Color(0.529463, 0.905818, 0.96318, 1)
+author_name = "Luko"
 link = "https://www.artstation.com/luko3artist"
 
 [node name="Pie" parent="Control" instance=ExtResource("5_wxbgr")]
@@ -129,8 +129,8 @@ offset_top = 178.0
 offset_right = 48.0
 offset_bottom = 242.0
 author_image = SubResource("AtlasTexture_13oni")
-author_name = "Pie"
 background_color = Color(0.953186, 0.784122, 0.971988, 1)
+author_name = "Pie"
 link = "https://bcmpinc.itch.io/"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
