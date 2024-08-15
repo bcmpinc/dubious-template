@@ -56,6 +56,11 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel") and get_tree().current_scene.name != "LogoAnimation":
 		print(get_tree().current_scene.name)
 		settings_visible(!%Settings.visible)
+	if event.is_action_pressed("ui_fullscreen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func play_music(stream : AudioStream, volume_db: float = 0.0):
 	if music_tween != null:
