@@ -43,10 +43,22 @@ func _ready():
 	)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(%SoundSlider.value))
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(%MusicSlider.value))
+	%CRT.toggled.connect(func(value):
+		$CrtShader.visible = value
+	)
+	%Fullscreen.toggled.connect(set_fullscreen)
 
 # For button noises
 func click():
 	$Click.play()
+
+func set_fullscreen(value):
+	%Fullscreen.set_pressed_no_signal(value)
+	if value:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	
 
 # Trigger audio start on first mouse input for web builds.
 func _input(event):
@@ -57,10 +69,7 @@ func _input(event):
 		print(get_tree().current_scene.name)
 		settings_visible(!%Settings.visible)
 	if event.is_action_pressed("ui_fullscreen"):
-		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		else:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		set_fullscreen(DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func play_music(stream : AudioStream, volume_db: float = 0.0):
 	if music_tween != null:

@@ -1,37 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bl7y2f3jrlhq3"]
+[gd_scene load_steps=7 format=3 uid="uid://bl7y2f3jrlhq3"]
 
 [ext_resource type="Shader" path="res://Menu/Menu.gdshader" id="1_g6hds"]
 [ext_resource type="Texture2D" uid="uid://wafqk3kleohn" path="res://Menu/leaves-8724660_640.jpg" id="2_rfvgw"]
 [ext_resource type="Script" path="res://Menu/Menu.gd" id="3_psqow"]
 [ext_resource type="Texture2D" uid="uid://cxelf535oafv7" path="res://Menu/cat-8863536_640.png" id="4_t7t41"]
-[ext_resource type="PackedScene" uid="uid://b3d1xeh8kjd8j" path="res://Menu/Credit/Credit.tscn" id="5_wxbgr"]
-[ext_resource type="Texture2D" uid="uid://ct3wkn3grsju3" path="res://Menu/Credit/authors.png" id="6_ujwum"]
+[ext_resource type="PackedScene" uid="uid://bejp6ggs2jf2m" path="res://Menu/Credit/AllCredits.tscn" id="5_yyxgg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d23pp"]
 shader = ExtResource("1_g6hds")
 shader_parameter/motion = Vector2(8, 8)
 shader_parameter/scale = 1.0
 shader_parameter/transform = Transform2D(1, -0.3, 0.3, 1, 0, 0)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w0mla"]
-atlas = ExtResource("6_ujwum")
-region = Rect2(16, 0, 16, 16)
-margin = Rect2(1, 1, 2, 2)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wedgg"]
-atlas = ExtResource("6_ujwum")
-region = Rect2(0, 0, 16, 16)
-margin = Rect2(1, 2, 2, 2)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_001a6"]
-atlas = ExtResource("6_ujwum")
-region = Rect2(32, 0, 16, 16)
-margin = Rect2(2, 2, 2, 2)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_13oni"]
-atlas = ExtResource("6_ujwum")
-region = Rect2(48, 2, 16, 16)
-margin = Rect2(1, 1, 2, 2)
 
 [node name="TitleScreen" type="TextureRect"]
 material = SubResource("ShaderMaterial_d23pp")
@@ -80,57 +59,7 @@ grow_vertical = 0
 scale = Vector2(0.457025, 0.457025)
 texture = ExtResource("4_t7t41")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" parent="." instance=ExtResource("5_yyxgg")]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_right = -40.0
-grow_horizontal = 0
-
-[node name="Artie" parent="Control" instance=ExtResource("5_wxbgr")]
-layout_mode = 0
-offset_left = -262.0
-offset_top = 120.0
-offset_right = -6.0
-offset_bottom = 184.0
-author_image = SubResource("AtlasTexture_w0mla")
-background_color = Color(0.614085, 0.976583, 0.696255, 1)
-author_name = "Artie"
-link = "https://frogwizardhat.itch.io/"
-
-[node name="Alias" parent="Control" instance=ExtResource("5_wxbgr")]
-layout_mode = 0
-offset_left = -361.0
-offset_top = 3.0
-offset_right = -105.0
-offset_bottom = 67.0
-author_image = SubResource("AtlasTexture_wedgg")
-background_color = Color(0.929641, 0, 0.00781262, 1)
-author_name = "Mr. Alias"
-link = "https://www.youtube.com/c/MrAlias"
-
-[node name="Luko" parent="Control" instance=ExtResource("5_wxbgr")]
-layout_mode = 0
-offset_left = -313.0
-offset_top = 60.0
-offset_right = -57.0
-offset_bottom = 124.0
-author_image = SubResource("AtlasTexture_001a6")
-background_color = Color(0.529463, 0.905818, 0.96318, 1)
-author_name = "Luko"
-link = "https://www.artstation.com/luko3artist"
-
-[node name="Pie" parent="Control" instance=ExtResource("5_wxbgr")]
-layout_mode = 0
-offset_left = -208.0
-offset_top = 178.0
-offset_right = 48.0
-offset_bottom = 242.0
-author_image = SubResource("AtlasTexture_13oni")
-background_color = Color(0.953186, 0.784122, 0.971988, 1)
-author_name = "Pie"
-link = "https://bcmpinc.itch.io/"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

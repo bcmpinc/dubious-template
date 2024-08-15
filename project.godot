@@ -22,7 +22,6 @@ buses/default_bus_layout="res://Global/Audio/bus-layout.tres"
 [autoload]
 
 Global="*res://Global/Global.tscn"
-Crt="*res://Global/CRT/crt.tscn"
 
 [display]
 

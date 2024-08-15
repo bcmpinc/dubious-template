@@ -30,7 +30,7 @@ void fragment(){
 	}
 	
 	if (CRT) {
-		vec3 crt_color = texture(crt_texture, uv * crt_resolution).rgb;
+		vec3 crt_color = texture(crt_texture, uv * crt_resolution).rgb + 0.4;
 		color *= crt_color;
 	}
 	

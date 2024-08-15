@@ -21,6 +21,10 @@ offset_bottom = 64.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_jw2my")
 script = ExtResource("2_hsrpt")
+background_color = null
+author_scale = null
+author_offset = null
+name_scale = null
 
 [node name="ClipMask" type="TextureRect" parent="."]
 show_behind_parent = true
@@ -56,6 +60,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(28, 28)
+expand_mode = 1
+stretch_mode = 4
 
 [node name="AuthorName" type="Label" parent="."]
 layout_mode = 1
@@ -70,4 +77,5 @@ offset_right = -18.0
 offset_bottom = 18.0
 grow_horizontal = 0
 grow_vertical = 2
+pivot_offset = Vector2(174, 18)
 horizontal_alignment = 1
